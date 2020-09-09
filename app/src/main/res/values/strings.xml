@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ChatApps</string>
+    <string name="app_name">ChatAppsDesign</string>
     <string name="text_welcome">Welcome</string>
     <string name="text_register">Register</string>
     <string name="text_login">Login</string>
@@ -28,5 +28,9 @@
     <string name="message_notif">write your message first!</string>
     <string name="hello_">Hello,</string>
     <string name="text_create_your_account_here">Create Your Account Here</string>
+    <string name="welcome_back">Welcome Back,</string>
+    <string name="text_sign_in_your_account">Sign In Your Account!</string>
+    <string name="forgot_pass">Forgot Password?</string>
+    <string name="remember">Coba diinget-inget lagi hayoo passwordnya</string>
 
 </resources>

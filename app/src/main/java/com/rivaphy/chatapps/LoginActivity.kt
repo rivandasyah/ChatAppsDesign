@@ -3,6 +3,7 @@ package com.rivaphy.chatapps
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
@@ -17,19 +18,23 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         //untuk toolbar
-        setSupportActionBar(toolbar_login)
-        supportActionBar!!.title = getString(R.string.text_login) //buat set nama toolbar
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true) //buat back ke welcome activity
-        mAuth = FirebaseAuth.getInstance()
-
-        toolbar_login.setNavigationOnClickListener {
-            val intentToWelcome = Intent(this, WelcomeActivity::class.java)
-            startActivity(intentToWelcome)
-            finish()
-        }
+//        setSupportActionBar(toolbar_login)
+//        supportActionBar!!.title = getString(R.string.text_login) //buat set nama toolbar
+//        supportActionBar!!.setDisplayHomeAsUpEnabled(true) //buat back ke welcome activity
+//        mAuth = FirebaseAuth.getInstance()
+//
+//        toolbar_login.setNavigationOnClickListener {
+//            val intentToWelcome = Intent(this, WelcomeActivity::class.java)
+//            startActivity(intentToWelcome)
+//            finish()
+//        }
 
         btn_login.setOnClickListener {
             loginUser()
+        }
+
+        tv_login_forgot_pass.setOnClickListener {
+            Toast.makeText(this, getString(R.string.remember), Toast.LENGTH_LONG).show()
         }
     }
 
@@ -58,5 +63,13 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == android.R.id.home) {
+            finish()
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

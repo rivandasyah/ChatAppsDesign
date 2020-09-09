@@ -55,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_register_hello" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cv_register"
+        android:id="@+id/cv_login"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         app:cardBackgroundColor="@color/colorPrimaryLight"
