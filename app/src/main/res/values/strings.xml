@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">ChatApps</string>
+    <string name="text_welcome">Welcome</string>
+    <string name="text_register">Register</string>
+    <string name="text_login">Login</string>
+    <string name="text_name">Name</string>
+    <string name="text_username">Username</string>
+    <string name="text_email">Email</string>
+    <string name="text_password">Password</string>
+    <string name="text_username_error">write your username</string>
+    <string name="text_email_username">please write your email</string>
+    <string name="text_password_error">please write your password</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="not_null">Tidak boleh kosong</string>
+    <string name="err">Message Error</string>
+    <string name="text_last_message">Last Message</string>
+    <string name="no_message">No Message</string>
+    <string name="send_message">Image Sent</string>
+    <string name="message_send">Send Message</string>
+    <string name="content_description">Content Description</string>
+    <string name="message">write message here. . . ,</string>
+    <string name="builder_ask">What do you want ?</string>
+    <string name="text_delete">Deleted</string>
+    <string name="text_failed">Failed, Not deleted</string>
+    <string name="message_notif">write your message first!</string>
+    <string name="hello_">Hello,</string>
+    <string name="text_create_your_account_here">Create Your Account Here</string>
+
+</resources>

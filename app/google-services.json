@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "167433417903",
+    "firebase_url": "https://chat-f29f4.firebaseio.com",
+    "project_id": "chat-f29f4",
+    "storage_bucket": "chat-f29f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:167433417903:android:b6969aaa88eb4f4d40105a",
+        "android_client_info": {
+          "package_name": "com.rivaphy.chatapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "167433417903-cnlvmcafjnn1oniop46otljoug8ed701.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rivaphy.chatapps",
+            "certificate_hash": "b7f7ab0091bad8c6d3c29aa6e94ac75cc28f53cf"
+          }
+        },
+        {
+          "client_id": "167433417903-vrubpeof0isrtt1hfshaq7ibqdq0s1h4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTh6GWz5tK3a1_NaPtD1A1hZpkpmp0_14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "167433417903-vrubpeof0isrtt1hfshaq7ibqdq0s1h4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
