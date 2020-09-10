@@ -101,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="112dp"
                 android:contentDescription="@string/content_description"
-                android:src="@drawable/instagram"
+                android:src="@drawable/ig"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_fb_profile"
                 app:layout_constraintEnd_toStartOf="@+id/iv_website_profile"
                 app:layout_constraintTop_toTopOf="@+id/iv_fb_profile"

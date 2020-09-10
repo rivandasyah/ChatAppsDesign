@@ -6,56 +6,84 @@
     android:layout_height="match_parent"
     tools:context=".ChatActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_chat_1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.PopupOverlay"
+        android:layout_height="72dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_chat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/iv_image_chat"
-                android:layout_width="@dimen/_32dp"
-                android:layout_height="@dimen/_32dp"
-                android:src="@drawable/profile" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/chat_toolbar">
+
+            <!--            <de.hdodenhof.circleimageview.CircleImageView-->
+            <!--                android:id="@+id/iv_image_chat"-->
+            <!--                android:layout_width="@dimen/_32dp"-->
+            <!--                android:layout_height="@dimen/_32dp"-->
+            <!--                android:src="@drawable/profile" />-->
+
+            <ImageView
+                android:id="@+id/btn_chat_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="24dp"
+                android:contentDescription="@string/content_description"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/back" />
 
             <TextView
                 android:id="@+id/tv_username_profile"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_26dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/oldenburg"
+                android:gravity="center_horizontal"
                 android:text="@string/text_username"
+                android:textAppearance="@style/register_create"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/_18sp"
-                android:textStyle="bold" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.34"
+                app:layout_constraintStart_toEndOf="@+id/btn_chat_back"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        </androidx.appcompat.widget.Toolbar>
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oldenburg"
+                android:text="@string/text_active_or_not"
+                android:textAppearance="@style/active_now"
+                app:layout_constraintEnd_toEndOf="@+id/tv_username_profile"
+                app:layout_constraintStart_toStartOf="@+id/tv_username_profile"
+                app:layout_constraintTop_toBottomOf="@+id/tv_username_profile" />
 
-    </com.google.android.material.appbar.AppBarLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/cv_chat_1" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_chat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/chat_typing"
+        app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -63,46 +91,77 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="46dp"
+            android:background="@drawable/chat_typing">
 
             <ImageView
                 android:id="@+id/iv_attach_file_profile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="6dp"
-                android:layout_marginTop="6dp"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="8dp"
                 android:contentDescription="@string/content_description"
+                app:layout_constraintStart_toEndOf="@+id/edt_username_profile"
+                app:layout_constraintTop_toTopOf="@+id/iv_chat_emoji"
+                app:srcCompat="@drawable/clip" />
+
+
+            <ImageView
+                android:id="@+id/iv_chat_emoji"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="8dp"
+                android:contentDescription="@string/content_description"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_attach_file" />
+                app:layout_constraintVertical_bias="0.521"
+                app:srcCompat="@drawable/emoji" />
 
             <EditText
                 android:id="@+id/edt_username_profile"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="16dp"
+                android:background="@android:color/transparent"
+                android:elevation="4dp"
                 android:ems="10"
-                android:hint="@string/message"
+                android:fontFamily="@font/oxygen"
+                android:hint="@string/typing"
                 android:importantForAutofill="no"
                 android:inputType="textPersonName"
-                app:layout_constraintBottom_toBottomOf="@+id/iv_attach_file_profile"
-                app:layout_constraintEnd_toStartOf="@+id/imageView2"
-                app:layout_constraintStart_toEndOf="@+id/iv_attach_file_profile"
-                app:layout_constraintTop_toTopOf="@+id/iv_attach_file_profile"
-                app:layout_constraintVertical_bias="0.666" />
+                android:textAppearance="@style/active_now"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_chat_emoji"
+                app:layout_constraintStart_toEndOf="@+id/iv_chat_emoji"
+                app:layout_constraintTop_toTopOf="@+id/iv_chat_emoji"
+                app:layout_constraintVertical_bias="0.583" />
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginEnd="6dp"
-                android:contentDescription="@string/content_description"
-                app:layout_constraintBottom_toBottomOf="@+id/iv_attach_file_profile"
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_chat_recording"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/recording"
+                android:src="@drawable/microphone"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_chat_emoji"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/iv_attach_file_profile"
-                app:srcCompat="@drawable/ic_action_name" />
+                app:layout_constraintStart_toEndOf="@+id/iv_attach_file_profile"
+                app:layout_constraintTop_toTopOf="@+id/iv_chat_emoji"
+                app:layout_constraintVertical_bias="0.0" />
+            <!--            <ImageView-->
+            <!--                android:id="@+id/imageView2"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="6dp"-->
+            <!--                android:layout_marginEnd="6dp"-->
+            <!--                android:contentDescription="@string/content_description"-->
+            <!--                app:layout_constraintBottom_toBottomOf="@+id/iv_attach_file_profile"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="@+id/iv_attach_file_profile"-->
+            <!--                app:srcCompat="@drawable/ic_action_name" />-->
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

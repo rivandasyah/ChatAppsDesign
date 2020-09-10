@@ -89,7 +89,7 @@
                 app:layout_constraintStart_toEndOf="@+id/iv_fb_visit_profile"
                 app:layout_constraintTop_toTopOf="@+id/iv_fb_visit_profile"
                 app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/instagram" />
+                app:srcCompat="@drawable/ig" />
 
             <ImageView
                 android:id="@+id/iv_fb_visit_profile"

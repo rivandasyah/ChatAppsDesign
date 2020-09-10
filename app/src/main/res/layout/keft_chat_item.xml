@@ -5,28 +5,50 @@
     android:layout_width="@dimen/_295dp"
     android:layout_height="match_parent">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/iv_profile_left_chat"
-        android:layout_width="@dimen/_60dp"
-        android:layout_height="@dimen/_60dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:src="@drawable/profile"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_profile_left_chat_bg"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/content_description"
+            android:src="@drawable/recording"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profile_left_chat"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/iv_profile_left_chat_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/tv_text_message_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_left"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/left_chat_bubble"
+        android:fontFamily="@font/oxygen"
         android:text="@string/text_username"
-        app:layout_constraintBottom_toBottomOf="@+id/iv_profile_left_chat"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
-        app:layout_constraintStart_toEndOf="@+id/iv_profile_left_chat"
-        app:layout_constraintTop_toTopOf="@+id/iv_profile_left_chat"
-        app:layout_constraintVertical_bias="0.512" />
+        android:textAlignment="center"
+        android:textAppearance="@style/chat_bubble"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout3"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout3" />
 
     <ImageView
         android:id="@+id/iv_left_message"

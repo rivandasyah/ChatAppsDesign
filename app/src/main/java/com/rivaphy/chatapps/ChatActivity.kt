@@ -44,12 +44,12 @@ class ChatActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat)
 
-        setSupportActionBar(toolbar_chat)
-        supportActionBar!!.title
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        toolbar_chat.setNavigationOnClickListener {
-            finish()
-        }
+//        setSupportActionBar(toolbar_chat)
+//        supportActionBar!!.title
+//        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+//        toolbar_chat.setNavigationOnClickListener {
+//            finish()
+//        }
 
         apiService = Client.Client.getClient(
             "http://fcm.googleapis.com/"
@@ -75,26 +75,26 @@ class ChatActivity : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val user: Users? = snapshot.getValue(Users::class.java)
                 tv_username_profile.text = user!!.getUsername()
-                Picasso.get().load(user.getProfile()).into(iv_image_chat)
+//                Picasso.get().load(user.getProfile()).into(iv_image_chat)
                 retrieveMessage(firebaseUser!!.uid, userIdVisit, user.getProfile())
             }
 
         })
 
         //imageView2 = yang buat send message di chat xml
-        imageView2.setOnClickListener {
-            notify = true
-            val message = edt_username_profile.text.toString()
-            if (message == "") {
-                Toast.makeText(
-                    this, getString(R.string.message_notif),
-                    Toast.LENGTH_LONG
-                ).show()
-            } else {
-                sendMessage(firebaseUser!!.uid, userIdVisit, message)
-            }
-            edt_username_profile.setText("")
-        }
+//        imageView2.setOnClickListener {
+//            notify = true
+//            val message = edt_username_profile.text.toString()
+//            if (message == "") {
+//                Toast.makeText(
+//                    this, getString(R.string.message_notif),
+//                    Toast.LENGTH_LONG
+//                ).show()
+//            } else {
+//                sendMessage(firebaseUser!!.uid, userIdVisit, message)
+//            }
+//            edt_username_profile.setText("")
+//        }
         iv_attach_file_profile.setOnClickListener {
             notify = true
             val intent = Intent()

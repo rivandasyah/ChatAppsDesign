@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_chat_profile"
+        android:layout_width="match_parent"
+        android:layout_height="298dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="298dp"
+            android:background="@drawable/chat_profile">
+
+
+            <ImageView
+                android:id="@+id/btn_chat_profile_item_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:contentDescription="@string/content_description"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/back" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_chat_profile_item"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/profile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_chat_profile_item_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/oldenburg"
+                android:text="@string/text_username"
+                android:textAppearance="@style/chat_profile"
+                app:layout_constraintEnd_toEndOf="@+id/iv_chat_profile_item"
+                app:layout_constraintStart_toStartOf="@+id/iv_chat_profile_item"
+                app:layout_constraintTop_toBottomOf="@+id/iv_chat_profile_item" />
+
+            <TextView
+                android:id="@+id/tv_chat_profile_item_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/oxygen"
+                android:text="@string/text_email"
+                android:textAppearance="@style/chat_profile_email"
+                app:layout_constraintEnd_toEndOf="@+id/tv_chat_profile_item_username"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="@+id/tv_chat_profile_item_username"
+                app:layout_constraintTop_toBottomOf="@+id/tv_chat_profile_item_username" />
+
+            <TextView
+                android:id="@+id/tv_chat_profile_item_status"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/oxygen"
+                android:text="@string/text_status"
+                android:textAlignment="center"
+                android:textAppearance="@style/chat_profile_email"
+                app:layout_constraintEnd_toEndOf="@+id/tv_chat_profile_item_email"
+                app:layout_constraintStart_toStartOf="@+id/tv_chat_profile_item_email"
+                app:layout_constraintTop_toBottomOf="@+id/tv_chat_profile_item_email" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_chat_profile_second"
+                android:layout_width="217dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_chat_profile_item_status">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_chat_profile_item_instagram"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:contentDescription="@string/content_description"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/instagram" />
+
+                    <ImageView
+                        android:id="@+id/tv_chat_profile_item_facebook"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:contentDescription="@string/content_description"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_chat_profile_item_instagram"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.783"
+                        app:layout_constraintStart_toEndOf="@+id/iv_chat_profile_item_twitter"
+                        app:layout_constraintTop_toTopOf="@+id/iv_chat_profile_item_instagram"
+                        app:srcCompat="@drawable/facebook" />
+
+                    <ImageView
+                        android:id="@+id/iv_chat_profile_item_twitter"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="52dp"
+                        android:contentDescription="@string/content_description"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_chat_profile_item_instagram"
+                        app:layout_constraintStart_toEndOf="@+id/iv_chat_profile_item_instagram"
+                        app:layout_constraintTop_toTopOf="@+id/iv_chat_profile_item_instagram"
+                        app:srcCompat="@drawable/twitter" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_chat_profile_blur"
+        android:layout_width="336dp"
+        android:layout_height="420dp"
+        android:alpha="0.5"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_chat_profile" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
